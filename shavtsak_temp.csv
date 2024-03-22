@@ -1,35 +1,35 @@
 ﻿shift,mission,duration,name,roles
-8,Machsom,8,a35,M
-8,Machsom,8,a53,W
-8,Machsom,8,a54,W
-8,Machsom,8,a51,W
-8,ShinGimel 8,4,a21,W
-8,Siur 51,8,a36,M
-8,Siur 51,8,a28,W
-8,Siur 51,8,a44,W
-8,Siur 51,8,a47,W
-12,ShinGimel 12,4,a49,W
-16,Machsom,8,a33,M
-16,Machsom,8,a41,W
-16,Machsom,8,a50,W
-16,Machsom,8,a7,W
-16,ShinGimel 16,4,a3,W
-16,Siur 51,8,a19,M
-16,Siur 51,8,a10,W
-16,Siur 51,8,a14,W
-16,Siur 51,8,a18,W
-20,ShinGimel 20,4,a15,W
-23,Carmel,24,a2,M
-23,Carmel,24,a52,W
-23,Carmel,24,a55,W
-23,Carmel,24,a56,W
-24,Machsom,8,a25,M
-24,Machsom,8,a21,W
-24,Machsom,8,a43,W
-24,Machsom,8,a28,W
-24,ShinGimel 0,4,a51,W
-24,Siur 51,8,a45,M
-24,Siur 51,8,a44,W
-24,Siur 51,8,a47,W
-24,Siur 51,8,a49,W
-28,ShinGimel 4,4,a53,W
+8,Machsom,8,איתמר בן חמו,M
+8,Machsom,8,קארין רובין,W
+8,Machsom,8,לוי פרץ,W
+8,Machsom,8,אופק חטואל,W
+8,ShinGimel,4,מיכאל גרמאי,W
+8,Siur 51,8,"שאדי מ""מ",M
+8,Siur 51,8,אורן דסטה,W
+8,Siur 51,8,איתמר (חובש),W
+8,Siur 51,8,סנה כהן,W
+12,ShinGimel,4,נעה קפח,W
+16,Machsom,8,אליזבת קליימן,M
+16,Machsom,8,עיית דגיישה,W
+16,Machsom,8,יובל פלדבוי,W
+16,Machsom,8,מטביי רנקוב,W
+16,ShinGimel,4,מתן כהן,W
+16,Siur 51,8,דן מיארה,M
+16,Siur 51,8,ירין צברי,W
+16,Siur 51,8,עדן מדינה,W
+16,Siur 51,8,ירין דונדה,W
+20,ShinGimel,4,גיא קופלוביץ,W
+23,Carmel,24,סרגיי קופמן,M
+23,Carmel,24,יאיר פרץ,W
+23,Carmel,24,עידו (חובש),W
+23,Carmel,24,אופיר (חובש),W
+24,Machsom,8,ראזי זיידן,M
+24,Machsom,8,קארין רובין,W
+24,Machsom,8,לוי פרץ,W
+24,Machsom,8,אופק חטואל,W
+24,ShinGimel,4,סהר לוי,W
+24,Siur 51,8,אילנית קבדה,M
+24,Siur 51,8,מיכאל גרמאי,W
+24,Siur 51,8,נעה קפח,W
+24,Siur 51,8,סנה כהן,W
+28,ShinGimel,4,אורן דסטה,W
