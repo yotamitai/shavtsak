@@ -1,58 +1,58 @@
 ﻿name,roles,hours_since_last_shift,available,last_mission
-a1,M,-4,1,Yatar 1
-a2,M,0,1,Siur 51
-a3,W,24,1,Home
-a4,W,24,0,Home
-a5,W,0,0,Anatot
-a6,M,9,0,Carmel
-a7,W,0,1,Siur 51
-a8,W,16,0,Machsom
-a9,M,0,0,Siur 51
-a10,W,24,1,Home
-a11,M,0,0,Anatot
-a12,W,10,0,Hamal
-a13,W,0,0,Home
-a14,W,24,1,Home
-a15,W,0,1,Machsom
-a16,M,16,0,Siur 51
-a17,M,8,0,Siur 51
-a18,W,24,1,Home
-a19,M,24,1,Home
-a20,W,0,0,Anatot
-a21,W,8,1,Siur 51
-a22,W,8,0,Siur 51
-a23,W,0,0,Anatot
-a24,W,0,0,Hamal
-a25,M,0,1,Machsom
-a26,W,24,0,Home
-a27,W,0,0,Siur 51
-a28,W,8,1,Siur 51
-a29,W,16,0,Siur 51
-a30,M,16,0,Machsom
-a31,W,24,0,Home
-a32,W,24,0,Home
-a33,M,9,1,Carmel
-a34,M,8,0,Machsom
-a35,M,16,1,Machsom
-a36,M,16,1,Machsom
-a37,W,0,0,Anatot
-a38,W,9,0,Carmel
-a39,M,24,0,Home
-a40,M,4,0,SheenGimel
-a41,W,24,1,Home
-a42,W,24,0,Home
-a43,W,-4,1,Yatar 1
-a44,W,8,1,Machsom
-a45,M,0,1,Machsom
-a46,W,0,0,Anatot
-a47,W,8,1,Machsom
-a48,W,0,0,Hamal
-a49,W,8,1,Machsom
-a50,W,8,1,SheenGimel
-a51,W,9,1,Carmel
-a52,W,0,1,Home
-a53,W,24,1,Carmel
-a54,W,24,1,Siur 51
-a55,W,0,1,SheenGimel
-a56,W,0,1,Machsom
-a57,W,16,0,Hamal
+אריאל שלמה,M,-4,1,Yatar 1
+סרגיי קופמן,M,0,1,Siur 51
+ירין צברי,W,24,1,Home
+ליהי בר,W,24,0,Home
+שריאל גולדוורג,W,0,0,Anatot
+אבירם גרידיש,M,9,0,Carmel
+מתן כהן,W,0,1,Siur 51
+חנה נחמד,W,16,0,Machsom
+שמואל דויטש,M,0,0,Siur 51
+עדן מדינה,W,24,1,Home
+אלכס בלנק,M,0,0,Anatot
+אור אסרף,W,10,0,Hamal
+מוטי אוחיון,W,0,0,Home
+ירין דונדה,W,24,1,Home
+גיא קופלוביץ,W,0,1,Machsom
+נוי חיון,M,16,0,Siur 51
+גלעד סגל,M,8,0,Siur 51
+עיית דגיישה,W,24,1,Home
+דן מיארה,M,24,1,Home
+רז פורטל,W,0,0,Anatot
+קארין רובין,W,8,1,Siur 51
+קרן ריכטר,W,8,0,Siur 51
+מיטל גולבהרי,W,0,0,Anatot
+יותם אמיתי,W,0,0,Hamal
+ראזי זיידן,M,0,1,Machsom
+קובי רופא,W,24,0,Home
+רם דנינו,W,0,0,Siur 51
+לוי פרץ,W,8,1,Siur 51
+ליהי סופר,W,16,0,Siur 51
+עילאי בן שבת,M,16,0,Machsom
+יוני שינו,W,24,0,Home
+ליזה קיטייבה,W,24,0,Home
+אליזבת קליימן,M,9,1,Carmel
+אורן יגב,M,8,0,Machsom
+"שאדי מ""מ",M,16,1,Machsom
+איתמר בן חמו,M,16,1,Machsom
+הילה רחמים,W,0,0,Anatot
+טל עמיאל,W,9,0,Carmel
+משה שריד,M,24,0,Home
+נועה בוחניק,M,4,0,SheenGimel
+יובל פלדבוי,W,24,1,Home
+כפיר שובל,W,24,0,Home
+סהר לוי,W,-4,1,Yatar 1
+מיכאל גרמאי,W,8,1,Machsom
+אילנית קבדה,M,0,1,Machsom
+עמית אבן,W,0,0,Anatot
+נעה קפח,W,8,1,Machsom
+מאיר בלילטי,W,0,0,Hamal
+מטביי רנקוב,W,8,1,Machsom
+אופק חטואל,W,8,1,SheenGimel
+סנה כהן,W,9,1,Carmel
+יאיר פרץ,W,0,1,Home
+אורן דסטה,W,24,1,Carmel
+איתמר (חובש),W,24,1,Siur 51
+עידו (חובש),W,0,1,SheenGimel
+אופיר (חובש),W,0,1,Machsom
+מורן עוזיאל,W,16,0,Hamal

@@ -4,6 +4,7 @@ from io import StringIO
 import streamlit as st
 import altair as alt
 import pandas as pd
+import random
 
 
 class Mission:
@@ -35,6 +36,35 @@ def get_base_shifts_and_missions():
     shifts[28] = [Mission("ShinGimel 4", 4, ['W'])]
     shifts[23] = [Mission("Carmel", 24, ['M', 'W', 'W', 'W'])]
     return shifts
+
+def print_shavtsak(shavtsak):
+  shift_set = set(shavtsak['shift'])
+  for s in shift_set:
+      st.write(f'{s%24:2}:00:')
+      shift_df = shavtsak.loc[shavtsak['shift']==s]
+      mission_set = set(shift_df['mission'])
+      for m in mission_set:
+          mission_df = shift_df.loc[shift_df['mission'] == m]
+          st.write(f'\t{m}: {", ".join(mission_df.name.tolist())}')
+
+def get_relevant_workers(df, mission, shift, role):
+    df_relevant = df.query("available == 1 and hours_since_last_shift >= 8")
+    df_relevant = added_preferences(df_relevant, mission, shift)
+    df_relevant_role = df_relevant[df_relevant['roles'].str.contains(role)]
+    sorted_df = df_relevant_role.sort_values(by='hours_since_last_shift', ascending=False)    
+    return sorted_df.name.tolist()
+
+def added_preferences(df, mission, shift):
+    """add any mission preferences here"""
+    if shift < 16:
+        df = df.query("last_mission != 'Home'")
+
+    # if mission == 'Machsom':
+    #     df = df.query("last_mission != 'Machsom' or hours_since_last_shift >= 16")
+    return df  
+
+
+
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
@@ -88,10 +118,40 @@ if st.button("Add Mission"):
 
 if st.button("Show Shifts and Missions"):
     shifts = dict(sorted(shifts.items()))
+    st.write(shifts)
     st.write('Missions:')
     for time,shift in shifts.items():
         st.write(f'{time%24}:00:')
         for mission in shift:
             st.write(f'\t{mission.name}')
 
-# if st.button("Generate Shavtsak"):
+if st.button("Generate Shavtsak"):
+    df = pd.read_csv('temp.csv')
+    shifts = dict(sorted(shifts.items()))
+    shavtsak = pd.DataFrame(columns=['shift', 'mission', 'duration', 'name', 'roles'])
+    current_time = list(shifts.keys())[0]
+
+    for shift, missions in shifts.items():
+        df['hours_since_last_shift'] += shift - current_time
+        _ = [mission.clear() for mission in missions]
+        random.shuffle(missions)
+        for role in ['M', 'W']:  # adds priority to first assign mefakdim
+            for mission in missions:
+                worker_list = get_relevant_workers(df, mission.name, shift, role)
+                for i in range(mission.req_workers.count(role)):
+                    if not worker_list:
+                        st.info(f"{50*'-'}\n\t******* SHAVTSAK FAILED *******\n"\
+                                f'{shift%24:2}:00 {mission.name:12} --> {role}: No available assignment\n' \
+                                f"{50*'-'}")
+                        break
+                    else:
+                        worker_name = worker_list.pop(0)
+                        mission.workers.append(worker_name)
+                        df.loc[df['name'] == worker_name, 'hours_since_last_shift'] = -mission.duration
+                        shavtsak.loc[len(shavtsak.index)] = [shift, mission.name, mission.duration, worker_name, role]
+                        # print(f'{shift%24:2}:00 {mission.name:12} --> {role}: {worker_name}')  # for debugging            
+        current_time = shift
+    df['hours_since_last_shift'] += 32-current_time
+    shavtsak.sort_values(by=['shift', 'mission', 'roles'], inplace=True)
+    shavtsak.to_csv("shavtsak_temp.csv", index=False, encoding='utf-8-sig')
+    print_shavtsak(shavtsak)
